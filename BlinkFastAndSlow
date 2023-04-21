@@ -1,0 +1,28 @@
+// This code is used to make the onboard LED blink on the Arduino Uno. 
+// First, it blinks 5 times fast and then 5 times slow.
+
+
+void setup() {
+  pinMode(13, OUTPUT);
+}
+
+void loop() {
+
+  for (int i=0; i<5; i++){
+  digitalWrite(13, HIGH);  
+  delay(200);                      
+  digitalWrite(13, LOW);   
+  delay(200);
+  }
+
+  delay(2000);
+
+  for (int j=0; j<5; j++) {
+  digitalWrite(13, HIGH);  
+  delay(1000);                      
+  digitalWrite(13, LOW);   
+  delay(1000);                      
+  }
+  delay(2000);
+}
+
